@@ -35,7 +35,7 @@ public class SecurityConfig
 
         http.csrf().disable()
                 .authorizeRequests()
-                .requestMatchers("/rest/auth/**").permitAll()
+                .antMatchers("/rest/auth/**").permitAll()
                 .anyRequest().authenticated()
                 .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
